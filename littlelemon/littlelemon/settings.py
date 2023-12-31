@@ -77,11 +77,11 @@ WSGI_APPLICATION = 'littlelemon.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'HOST': '127.0.0.1',
+        'HOST': 'husseinmimi.com',
         'PORT': '3306',
         'NAME': 'littleLemon',
-        'USER': 'root',
-        'PASSWORD': 'root@123',
+        'USER': 'littlelemon',
+        'PASSWORD': 'littleLemon@123',
         'OPTIONS': {
             'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"
         }
