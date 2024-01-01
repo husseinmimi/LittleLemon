@@ -3,7 +3,7 @@ from rest_framework.generics import ListCreateAPIView, RetrieveUpdateDestroyAPIV
 from rest_framework.viewsets import ModelViewSet
 from rest_framework.response import Response
 from django.shortcuts import render
-
+from rest_framework.permissions import IsAuthenticated
 from .models import Booking, Menu
 from .serializers import BookingSerializer, MenuSerializer
 # Create your views here.
@@ -27,3 +27,4 @@ class SingleMenuItemView(RetrieveUpdateDestroyAPIView):
 class BookingViewSet(ModelViewSet):
     serializer_class = BookingSerializer
     queryset = Booking.objects.all()
+    permission_classes = [IsAuthenticated]
